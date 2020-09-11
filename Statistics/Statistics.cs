@@ -15,7 +15,7 @@ namespace Statistics
             //Implement statistics here
             Stats computedValues;
 
-            if (values.Count() == 0)
+            if (values.Count == 0)
             {
                 computedValues.average = Double.NaN;
                 computedValues.min = Double.NaN;
@@ -32,18 +32,18 @@ namespace Statistics
         double calculateAverage(List<TYPE> values)
         {
             dynamic sum = 0;
-            for(int i = 0; i<values.Count();i++)
+            for(int i = 0; i<values.Count;i++)
             {
                 sum = sum + values[i];
             }
-            sum /= values.Count();
+            sum /= values.Count;
             return sum;
         }
 
         double calculateMin(List<TYPE> values)
         {
             dynamic min = values[0];
-            for(int i = 1; i<values.Count();i++)
+            for(int i = 1; i<values.Count;i++)
             {
                 if(min > values[i])
                     min = values[i];
@@ -55,7 +55,7 @@ namespace Statistics
         double calculateMax(List<TYPE> values)
         {
             dynamic max = values[0];
-            for (int i = 1; i < values.Count(); i++)
+            for (int i = 1; i < values.Count; i++)
             {
                 if (max < values[i])
                     max = values[i];
