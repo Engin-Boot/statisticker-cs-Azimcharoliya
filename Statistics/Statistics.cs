@@ -9,7 +9,7 @@ namespace Statistics
         public double average, min, max;
     }
 
-    class StatsComputer
+    public class StatsComputer
     {
         public Stats CalculateStatistics(List<double> values)
         {
