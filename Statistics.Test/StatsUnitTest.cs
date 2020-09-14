@@ -22,7 +22,7 @@ namespace Statistics.Test
         [Fact]
         public void WnenCalledWithEmptyListThenReportsNANForAverageMinMax()
         {
-            var statsComputer = new StatsComputer<double>();
+            var statsComputer = new StatsComputer();
             var computedStats = statsComputer.CalculateStatistics(
                 new List<double>{});
             Assert.True(Double.IsNaN(computedStats.average));
