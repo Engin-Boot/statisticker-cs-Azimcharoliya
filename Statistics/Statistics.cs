@@ -32,7 +32,7 @@ namespace Statistics
 
         double calculateAverage(List<double> values)
         {
-            dynamic sum = 0;
+            double sum = 0;
             for(int i = 0; i<values.Count;i++)
             {
                 sum = sum + values[i];
@@ -43,7 +43,7 @@ namespace Statistics
 
         double calculateMin(List<double> values)
         {
-            dynamic min = values[0];
+            double min = values[0];
             for(int i = 1; i<values.Count;i++)
             {
                 if(min > values[i])
@@ -55,7 +55,7 @@ namespace Statistics
 
         double calculateMax(List<double> values)
         {
-            dynamic max = values[0];
+            double max = values[0];
             for (int i = 1; i < values.Count; i++)
             {
                 if (max < values[i])
