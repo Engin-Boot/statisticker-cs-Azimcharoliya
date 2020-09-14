@@ -1,16 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Statistics
 {
+    
     public struct Stats
     {
         public double average, min, max;
     }
 
-    public class StatsComputer<TYPE>
+    class StatsComputer
     {
-        public Stats CalculateStatistics(List<TYPE> values)
+        public Stats CalculateStatistics(List<double> values)
         {
             //Implement statistics here
             Stats computedValues;
@@ -22,14 +23,14 @@ namespace Statistics
                 computedValues.max = Double.NaN;
                 return computedValues;
             }
-
+            
             computedValues.min = calculateMin(values);
             computedValues.max = calculateMax(values);
             computedValues.average = calculateAverage(values);
             return computedValues;
         }
 
-        double calculateAverage(List<TYPE> values)
+        double calculateAverage(List<double> values)
         {
             dynamic sum = 0;
             for(int i = 0; i<values.Count;i++)
@@ -40,7 +41,7 @@ namespace Statistics
             return sum;
         }
 
-        double calculateMin(List<TYPE> values)
+        double calculateMin(List<double> values)
         {
             dynamic min = values[0];
             for(int i = 1; i<values.Count;i++)
@@ -52,7 +53,7 @@ namespace Statistics
             return min;
         }
 
-        double calculateMax(List<TYPE> values)
+        double calculateMax(List<double> values)
         {
             dynamic max = values[0];
             for (int i = 1; i < values.Count; i++)
@@ -63,6 +64,5 @@ namespace Statistics
 
             return max;
         }
-
     }
 }
